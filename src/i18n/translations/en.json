@@ -1,0 +1,62 @@
+{
+  "appName": "DAINIK",
+  "appSubtitle": "The Daily Newspaper Reel",
+  "edition": "DAILY EDITION",
+  "readMore": "Read Full Story",
+  "close": "Close",
+  "swipeHint": "Swipe or scroll to navigate",
+  "minsRead": "min read",
+  "published": "Published",
+  "admin": "Admin",
+  "adminPanel": "Admin Dashboard",
+  "backToFeed": "Back to News Feed",
+  "fallbackNotice": "Hindi & Telugu translation not yet published — showing English edition",
+  "categories": {
+    "All": "All Stories",
+    "National": "National",
+    "World": "World",
+    "Business": "Business",
+    "Technology": "Technology",
+    "Sports": "Sports",
+    "Entertainment": "Entertainment",
+    "Science": "Science"
+  },
+  "adminAuth": {
+    "title": "Editorial Access Gate",
+    "subtitle": "Enter the editor passcode to access the publication management panel.",
+    "passcodeLabel": "Editor Passcode",
+    "passcodePlaceholder": "Enter passcode...",
+    "submit": "Authenticate",
+    "invalid": "Incorrect passcode. Please try again."
+  },
+  "adminForm": {
+    "title": "Publish New Story",
+    "subtitle": "Create news content with multi-language coverage across English, Hindi, and Telugu.",
+    "category": "Category",
+    "coverUrl": "Cover Image URL (Unsplash / Direct link)",
+    "coverUrlPlaceholder": "https://images.unsplash.com/...",
+    "author": "Author / Journalist",
+    "source": "Source Publication",
+    "enTab": "English (Required)",
+    "hiTab": "Hindi (हिन्दी)",
+    "teTab": "Telugu (తెలుగు)",
+    "storyTitle": "Headline Title",
+    "storySummary": "Short Excerpt / Reel Summary (~250 chars)",
+    "storyBody": "Full Article Body",
+    "publishBtn": "Publish to Daily Feed",
+    "publishedSuccess": "Story published successfully to the live feed!",
+    "missingEnFields": "Please fill in the required English Headline and Excerpt."
+  },
+  "adminList": {
+    "title": "Published Stories",
+    "totalStories": "Total stories",
+    "resetSeed": "Reset to Seed Stories",
+    "deleteConfirm": "Are you sure you want to delete this story?",
+    "noPosts": "No stories published yet. Use the form above to add news."
+  },
+  "emptyFeed": {
+    "title": "No News Stories Available",
+    "message": "The news feed is currently empty. Visit the admin panel to publish stories.",
+    "adminBtn": "Go to Admin Panel"
+  }
+}

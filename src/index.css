@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+}
+
+/* Custom scroll behavior & utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Blur transition on language change */
+.lang-switching {
+  filter: blur(4px);
+  opacity: 0.4;
+  transition: filter 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+.lang-switched {
+  filter: blur(0px);
+  opacity: 1;
+  transition: filter 0.35s ease-in, opacity 0.35s ease-in;
+}
+
+/* Custom Typography classes per language */
+.font-headline-en {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-headline-hi {
+  font-family: 'Noto Serif Devanagari', 'Playfair Display', serif;
+}
+
+.font-headline-te {
+  font-family: 'Noto Serif Telugu', 'Playfair Display', serif;
+}
+
+/* Editorial paper drop shadows & borders */
+.editorial-shadow {
+  box-shadow: 0 20px 40px -15px rgba(24, 24, 27, 0.12), 0 0 1px rgba(24, 24, 27, 0.08);
+}
+
+.editorial-border {
+  border-color: rgba(24, 24, 27, 0.1);
+}
+
+/* Ambient canvas positioning */
+#ambient-canvas-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
