@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Lock, KeyRound, AlertTriangle } from 'lucide-react';
 import { useAppStore } from '../../store/useAppStore';
 
-const DEFAULT_PASSCODE = import.meta.env.VITE_ADMIN_PASSCODE || 'dainik2026';
+const DEFAULT_PASSCODE = import.meta.env.VITE_ADMIN_PASSCODE || 'becho2026';
 
 export const AdminLogin: React.FC = () => {
   const [passcode, setPasscode] = useState('');
@@ -50,7 +50,7 @@ export const AdminLogin: React.FC = () => {
             />
             <KeyRound className="w-4 h-4 text-ink-400 absolute right-3.5 top-1/2 -translate-y-1/2" />
           </div>
-          <p className="mt-1 text-[11px] text-ink-400 italic">Default passcode: <code className="font-mono bg-paper-200 px-1.5 py-0.5 rounded text-ink-800 font-bold">dainik2026</code></p>
+          <p className="mt-1 text-[11px] text-ink-400 italic">Default passcode: <code className="font-mono bg-paper-200 px-1.5 py-0.5 rounded text-ink-800 font-bold">becho2026</code></p>
         </div>
 
         {error && (

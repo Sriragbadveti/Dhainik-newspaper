@@ -30,7 +30,7 @@ export const AdminPostForm: React.FC = () => {
   const [category, setCategory] = useState<Category>('Technology');
   const [coverImageUrl, setCoverImageUrl] = useState(PRESET_IMAGES[0]);
   const [author, setAuthor] = useState('Editorial Staff');
-  const [source, setSource] = useState('Dainik Bureau');
+  const [source, setSource] = useState('BECHO Bureau');
 
   // Localized fields state
   const [enTitle, setEnTitle] = useState('');

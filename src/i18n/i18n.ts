@@ -20,7 +20,7 @@ i18n
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
-      lookupLocalStorage: 'dainik_language',
+      lookupLocalStorage: 'becho_language',
     },
     interpolation: {
       escapeValue: false, // react already handles escaping

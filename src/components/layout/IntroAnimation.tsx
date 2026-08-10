@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export const IntroAnimation: React.FC = () => {
   const [isVisible, setIsVisible] = useState(() => {
-    return !sessionStorage.getItem('dainik_intro_seen');
+    return !(sessionStorage.getItem('becho_intro_seen') || sessionStorage.getItem('dainik_intro_seen'));
   });
   const { t } = useTranslation();
 
@@ -29,7 +29,7 @@ export const IntroAnimation: React.FC = () => {
   }, [isVisible]);
 
   const dismissIntro = () => {
-    sessionStorage.setItem('dainik_intro_seen', 'true');
+    sessionStorage.setItem('becho_intro_seen', 'true');
     setIsVisible(false);
   };
 

@@ -1,12 +1,16 @@
 import { NewsPost } from '../types/news';
 import { SEED_POSTS } from './seedPosts';
 
-const STORAGE_KEY = 'dainik_news_posts_v1';
+const STORAGE_KEY = 'becho_news_posts_v1';
+const OLD_STORAGE_KEY = 'dainik_news_posts_v1';
 
 export const postsService = {
   getPosts(): NewsPost[] {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
+      let stored = localStorage.getItem(STORAGE_KEY);
+      if (!stored) {
+        stored = localStorage.getItem(OLD_STORAGE_KEY);
+      }
       if (!stored) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(SEED_POSTS));
         return SEED_POSTS;
@@ -16,6 +20,8 @@ export const postsService = {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(SEED_POSTS));
         return SEED_POSTS;
       }
+      // Migrate to new storage key if needed
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(parsed));
       return parsed;
     } catch (e) {
       console.warn('Failed to parse localStorage news posts, using seed data:', e);

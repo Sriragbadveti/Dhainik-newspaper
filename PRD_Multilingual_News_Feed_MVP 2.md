@@ -1,5 +1,5 @@
 # Product Requirements Document
-## "Dainik" — Swipeable Multilingual News Feed (Demo / MVP)
+## "BECHO" — Swipeable Multilingual News Feed (Demo / MVP)
 
 **Version:** 1.0
 **Status:** Draft — ready for build
@@ -278,7 +278,7 @@ src/
 1. **Admin passcode** — confirm it's fine to ship as a build-time env var (not secure, demo-only) rather than building real auth.
 2. **Content ownership for seed data** — who writes/approves the 8–12 seed posts in all 3 languages (placeholder/lorem-in-language vs. real sample news copy)?
 3. **Expanded single-post view (§7.3)** — confirm if it's in scope for this pass or can be deferred.
-4. **Branding** — is there a name/logo ("Dainik" is a placeholder meaning "daily" in Hindi) or should the build agent propose one?
+4. **Branding** — is there a name/logo ("BECHO" is the app name) or should the build agent propose one?
 
 ---
 

@@ -25,7 +25,7 @@ interface AppState {
 }
 
 export const useAppStore = create<AppState>((set, get) => ({
-  language: (localStorage.getItem('dainik_language') as Language) || 'en',
+  language: (localStorage.getItem('becho_language') as Language) || (localStorage.getItem('dainik_language') as Language) || 'en',
   isLangSwitching: false,
   
   setLanguage: (lang: Language) => {
@@ -35,7 +35,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     // Smooth blur transition trigger
     setTimeout(() => {
       i18n.changeLanguage(lang);
-      localStorage.setItem('dainik_language', lang);
+      localStorage.setItem('becho_language', lang);
       set({ language: lang });
       
       setTimeout(() => {
@@ -84,9 +84,9 @@ export const useAppStore = create<AppState>((set, get) => ({
   expandedPost: null,
   setExpandedPost: (post) => set({ expandedPost: post }),
 
-  isAdmin: sessionStorage.getItem('dainik_is_admin') === 'true',
+  isAdmin: (sessionStorage.getItem('becho_is_admin') || sessionStorage.getItem('dainik_is_admin')) === 'true',
   setIsAdmin: (isAdmin) => {
-    sessionStorage.setItem('dainik_is_admin', isAdmin ? 'true' : 'false');
+    sessionStorage.setItem('becho_is_admin', isAdmin ? 'true' : 'false');
     set({ isAdmin });
   }
 }));
