@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { ShieldCheck, Newspaper, ArrowLeft } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { SearchBar } from './SearchBar';
 import { useAppStore } from '../../store/useAppStore';
 
 export const Header: React.FC = () => {
@@ -46,8 +47,9 @@ export const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Right: Language Switcher, Breaking Stack & Admin Link */}
+        {/* Right: Search Bar, Language Switcher, Breaking Stack & Admin Link */}
         <div className="flex items-center space-x-2 sm:space-x-3">
+          <SearchBar />
           <LanguageSwitcher />
 
           <Link

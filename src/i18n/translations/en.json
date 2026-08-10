@@ -58,5 +58,8 @@
     "title": "No News Stories Available",
     "message": "The news feed is currently empty. Visit the admin panel to publish stories.",
     "adminBtn": "Go to Admin Panel"
-  }
+  },
+  "searchPlaceholder": "Search news stories...",
+  "searchNoResults": "No news stories found",
+  "searchHint": "Type to search headlines, topics, or authors"
 }
